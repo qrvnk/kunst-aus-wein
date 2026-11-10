@@ -3,28 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kunst aus Wein – Testseite</title>
+  <title>Kunst aus Wein – Lichtobjekte aus Weinreben und Fassdauben</title>
+  <meta name="description" content="Handgefertigte Lichtobjekte aus alten Weinreben und Fassdauben – Unikate aus Bochum. Unsere neue Website entsteht gerade.">
   <style>
+    :root { --bg: #15110e; --text: #ece3d8; --muted: #a89a8a; --gold: #e9b45a; --line: rgba(236,227,216,0.14); }
+    * { box-sizing: border-box; }
     body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f7f1ea;
-      color: #5a1a2a;
-      font-family: Georgia, serif;
-      text-align: center;
-      padding: 16px;
+      margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+      background: var(--bg); color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6;
     }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    p { font-size: 1.1rem; color: #444; }
+    .hero {
+      position: relative; flex: 1; display: flex; align-items: center;
+      background: url("bilder/leuchte-rebe.jpg") center 60% / cover no-repeat;
+      padding: 72px 20px;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(21,17,14,0.75), rgba(21,17,14,0.88) 55%, var(--bg));
+    }
+    .inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; text-align: center; }
+    .eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.8rem; margin: 0 0 14px; }
+    h1 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: clamp(2.6rem, 8vw, 4.5rem); line-height: 1.1; margin: 0 0 16px; }
+    h1 span { color: var(--gold); }
+    .lead { font-size: 1.15rem; margin: 0 auto 36px; max-width: 46ch; }
+    .box {
+      border: 1px solid rgba(233,180,90,0.4); border-radius: 10px; padding: 24px;
+      background: rgba(21,17,14,0.6); margin: 0 auto 32px; max-width: 560px;
+    }
+    .box h2 { font-family: Georgia, serif; font-weight: 500; font-size: 1.5rem; margin: 0 0 4px; }
+    .box p { margin: 0; color: var(--muted); }
+    .box .eyebrow { color: var(--gold); }
+    .box strong { color: var(--text); font-weight: 600; }
+    .contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .contact a {
+      color: var(--text); text-decoration: none; border: 1px solid var(--line);
+      border-radius: 999px; padding: 10px 20px; transition: border-color .2s, color .2s;
+    }
+    .contact a:hover { border-color: var(--gold); color: var(--gold); }
+    footer { border-top: 1px solid var(--line); padding: 24px 20px; text-align: center; color: var(--muted); font-size: 0.9rem; }
+    footer a { color: var(--muted); margin: 0 8px; }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Kunst aus Wein</h1>
-    <p>Testseite – wenn du das siehst, funktioniert GitHub Pages. 🍷</p>
-  </div>
+  <main class="hero">
+    <div class="inner">
+      <p class="eyebrow">Neue Website in Arbeit</p>
+      <h1>Kunst <span>aus</span> Wein</h1>
+      <p class="lead">Lichtobjekte aus alten Weinreben und Fassdauben. Unsere neue Website entsteht gerade – schauen Sie bald wieder vorbei.</p>
+
+      <div class="box">
+        <p class="eyebrow" style="margin-bottom:8px">Nächster Markt</p>
+        <h2>Weihnachtsmarkt Waldgut Schulze Beikel</h2>
+        <p>Borken-Marbeck · <strong>27. November – 20. Dezember 2026</strong><br>an allen vier Adventswochenenden (Fr–So)</p>
+      </div>
+
+      <div class="contact">
+        <a href="tel:+4917680543011">0176 80543011</a>
+        <a href="mailto:kunst-aus-wein@t-online.de">kunst-aus-wein@t-online.de</a>
+        <a href="https://www.instagram.com/kunstauswein" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/kunstauswein" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Kunst aus Wein
+    <br><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+  </footer>
 </body>
 </html>
